@@ -1,10 +1,9 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
     const messageDiv = document.getElementById('message');
     
     // Definir credenciais válidas
-    const validUsername = "João Marcos Tokarski";
+    const validUsername = "Joao Tokarski";
     const validPassword = "18/09/2008";
     
     loginForm.addEventListener('submit', function(e) {
@@ -16,27 +15,21 @@ document.addEventListener('DOMContentLoaded', function() {
         // Verificar credenciais
         if (username === validUsername && password === validPassword) {
             // Login bem-sucedido
-            showMessage('Login realizado com sucesso! Redirecionando...', 'success');
-            
-            // Simular redirecionamento após 2 segundos
-            setTimeout(function() {
-                alert('Bem-vindo ao sistema, ' + username + '!');
-                // Aqui você redirecionaria para a página principal
-                // window.location.href = 'pagina-principal.html';
-            }, 2000);
+            showMessage('Login bem-sucedido!', 'success');
         } else {
             // Login falhou
-            showMessage('Usuário ou senha incorretos. Tente novamente.', 'error');
+            showMessage('Usuário ou senha incorretos!', 'error');
         }
     });
     
     function showMessage(text, type) {
         messageDiv.textContent = text;
         messageDiv.className = 'message ' + type;
+        messageDiv.style.display = 'block';
         
-        // Esconder a mensagem após 5 segundos
+        // Esconder a mensagem após 3 segundos
         setTimeout(function() {
             messageDiv.style.display = 'none';
-        }, 5000);
+        }, 3000);
     }
 });
