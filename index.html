@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Login - SecureApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-container">
+            <div class="logo">S</div>
+            <h1>SecureApp</h1>
+            <p class="subtitle">Sistema de Autenticação Segura</p>
+        </div>
+        
+        <form id="loginForm" class="login-form">
+            <div class="input-group">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <button type="submit">Entrar</button>
+        </form>
+        
+        <div id="message" class="message"></div>
+        
+        <div class="hint">
+            Dica: Use "João Marcos Tokarski" como usuário e "18/09/2008" como senha
+        </div>
+    </div>
 
+    <script src="script.js"></script>
+</body>
+</html>
